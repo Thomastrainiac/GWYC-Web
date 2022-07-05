@@ -11,8 +11,8 @@
 			  { name: 'Discord User', value: document.getElementById("disc").value },
               { name: 'Roblox User', value: document.getElementById("user").value },
               { name: 'Suggestion Name', value: document.getElementById("name").value },
-			  { name: 'Suggestion Description', value: document.getElementById("desc").value }
-            ]
+            ],
+			description: document.getElementById("desc").value
           }],
         };
 
