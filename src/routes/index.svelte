@@ -36,7 +36,7 @@
 			document.getElementById("completed").style.display = "none"
 			document.getElementById("subForm").style.display = "flex"
 		    document.getElementById("subDiv").style.display = "flex"
-		  }, 5000)
+		  }, 3000)
         } else {
           alert('There was an error! Try again later!');
         };
@@ -93,22 +93,30 @@
 		border-radius: 5px;
 		border: 2px solid rgb(0,117,176);
 		font-size: 18px;
+		resize: none;
 	}
 
 	div {
 		display: flex;
-		justify-content: center;
+		padding-left: 10%;
+		padding-right: 10%;
 		width:100%;
 	}
 
 	div.completed {
 		display: none;
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
 		height: 100vh;
 	}
 
 	p {
+		margin: 0;
 		font-weight: 700;
 		font-size: 30px;
+		position: absolute;
+		top: 50%;
 	}
 	button {
 		width: 20%;
