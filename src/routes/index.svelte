@@ -8,6 +8,7 @@
           embeds: [{
             title: 'Suggestion Submitted',
             fields: [
+			  { name: 'Discord User', value: document.getElementById("disc").value },
               { name: 'Roblox User', value: document.getElementById("user").value },
               { name: 'Suggestion Name', value: document.getElementById("name").value },
 			  { name: 'Suggestion Description', value: document.getElementById("desc").value }
@@ -28,6 +29,7 @@
         if (response.ok) {
 		  document.getElementById("user").value = "";
 		  document.getElementById("name").value = "";
+		  document.getElementById("desc").value = "";
 		  document.getElementById("desc").value = "";
 		  document.getElementById("subForm").style.display = "none"
 		  document.getElementById("subDiv").style.display = "none"
@@ -52,6 +54,8 @@
 	<form id="subForm">
 		<label for="name">ROBlOX USERNAME:</label><br>
 		<input class="name" type="text" id="user" name="user"><br>
+		<label for="disc">DISCORD USERNAME: (WITH #)</label><br>
+		<input class="name" type="text" id="disc" name="disc"><br>
 		<label for="name">SUGGESTION NAME:</label><br>
 		<input class="name" type="text" id="name" name="name"><br>
 		<label for="desc">DESCRIPTION:</label><br>
@@ -89,7 +93,7 @@
 
 	textarea.desc {
 		width: 100%;
-		height: 30vh;
+		height: 20vh;
 		border-radius: 5px;
 		border: 2px solid rgb(0,117,176);
 		font-size: 18px;
